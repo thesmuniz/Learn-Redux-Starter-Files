@@ -9,7 +9,9 @@ import Main from './components/Main'
 import Single from './components/Single'
 import PhotoGrid from './components/PhotoGrid'
 
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import store, { history } from './store';
 
 const router = (
   <Router history={browserHistory}>
@@ -20,4 +22,4 @@ const router = (
   </Router>
 )
 
-render(<Main />, document.getElementById('root'));
+render(router, document.getElementById('root'));
